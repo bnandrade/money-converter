@@ -105,8 +105,15 @@
                                     </div>
 
                                 <div class="col-span-3 text-center">
-                                    <button type="submit" class="bg-blue-500 px-4 py-2 text-lg rounded-lg border-gray-300 text-white hover:bg-blue-700 ">Converter moeda</button>
+                                    <button  type="submit" class="bg-blue-500 px-4 py-2 text-lg rounded-lg border-gray-300 text-white hover:bg-blue-700 ">Converter moeda</button>
+
                                 </div>
+
+                                <div class="col-span-3 text-center" wire:loading.delay.long >
+                                    <button type="button" class="bg-indigo-500 text-white p-4 rounded" disabled>
+                                        Estamos processando sua solicitação...
+                                    </button>
+                            </div>
 
                         @endif
                         @if($ask_value)

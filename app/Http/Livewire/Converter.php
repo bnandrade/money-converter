@@ -14,6 +14,7 @@ class Converter extends Component
 {
 
     public $show_form = true;
+    public $created = false;
 
     public $default_currency = 'BRL';                   // moeda padrão (origem) - sigla
     public $default_currency_ext = 'Real Brasileiro';   // moeda padrão (origem) - por extenso
@@ -56,6 +57,8 @@ class Converter extends Component
             ]
         );
 
+
+        $this->created = true;
         $fee = Fee::first();
 
         $this->show_form = false;
