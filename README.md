@@ -7,8 +7,8 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 - [Laravel sail](https://laravel.com/docs/9.x/sail#installing-sail-into-existing-applications).
 - [Laravel breeze](https://laravel.com/docs/9.x/starter-kits#laravel-breeze-installation).
-
 - [Livewire](https://laravel-livewire.com/docs/2.x/quickstart#install-livewire).
+- [Livewire WireUI](https://livewire-wireui.com/docs/get-started).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
