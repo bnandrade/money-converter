@@ -2,10 +2,12 @@
 
 namespace App\Http\Livewire;
 
+use App\Mail\ConverterMail;
 use App\Models\Conversion;
 use App\Models\Fee;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
 
 class Converter extends Component
@@ -28,6 +30,7 @@ class Converter extends Component
 
     public function render()
     {
+
         $user_id = Auth::id();
         $my_conversions = Conversion::where('user_id', $user_id)->orderBy('id', 'DESC')->get();
 
@@ -81,6 +84,23 @@ class Converter extends Component
             'destination_value' => $this->destination_value,
             'user_id' => Auth::id()
         ]);
+
+        Mail::to(Auth::user()->email)
+        ->send(new ConverterMail(
+            'Money Converter <br> By Bruno Andrade',
+            'bruno_weusa@hotmail.com',
+            'Obrigado pela oportunidade!',
+                $this->default_currency,
+                $this->destination_currency,
+                $this->value,
+                $this->type_payment,
+                $this->ask_value,
+                $this->destination_value,
+                $this->payment_rate_value,
+                $this->conversion_rate_value,
+                $this->default_value,
+            )
+        );
 
     }
 }
