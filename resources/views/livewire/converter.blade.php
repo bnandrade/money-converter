@@ -116,7 +116,7 @@
                                     <div>Valor para conversão: <span class="font-bold">R$ {{number_format($value, '2',',','.')}}</span> </div>
                                     <div>Forma de pagamento: <span class="font-bold">{{$type_payment}}</span></div>
                                     <div>Cotação moeda destino: <span class="font-bold">$ {{$ask_value}}</span></div>
-                                    <div>Valor comprado moeda destino": <span class="font-bold">$ {{number_format($destination_value, '2',',','.')}}</span></div>
+                                    <div>Valor comprado moeda destino: <span class="font-bold">$ {{number_format($destination_value, '2',',','.')}}</span></div>
                                     <div>Taxa de pagamento: <span class="font-bold">R$ {{number_format($payment_rate_value, '2',',','.')}}</span></div>
                                     <div>Taxa de conversão: <span class="font-bold">R$ {{number_format($conversion_rate_value, '2',',','.')}}</span></div>
                                     <div>Valor utilizado para conversão: <span class="font-bold">R$ {{number_format($default_value, '2',',','.')}}</span></div>
@@ -177,7 +177,7 @@
                                     {{$conversion->type_payment}}<br>
                                     (Taxa: {{$conversion->payment_rate*100}}%)
                                 </td>
-                                <td class=" border border-light-blue-500 px-4 py-2 text-light-blue-600 text-xs">$ {{number_format($conversion->ask_value, '3',',','.')}}</td>
+                                <td class=" border border-light-blue-500 px-4 py-2 text-light-blue-600 text-xs">$ {{$conversion->ask_value}}</td>
                                 <td class=" border border-light-blue-500 px-4 py-2 text-light-blue-600 text-xs">$ {{number_format($conversion->destination_value, '2',',','.')}}</td>
                                 <td class=" border border-light-blue-500 px-4 py-2 text-light-blue-600 text-xs">
                                     Conversão: R$ {{number_format($conversion->conversion_rate_value, '2',',','.')}}<br>

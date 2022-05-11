@@ -30,7 +30,7 @@
 
             <!-- Page Content -->
             <main>
-                @livewire('converter')
+                {{ $slot }}
             </main>
         </div>
         @livewireScripts

@@ -10,7 +10,10 @@ class Fee extends Model
     use HasFactory;
 
     protected $fillable = [
-        'conversion_rate',
-        'payment_rate'
+        'conversion_rate_under',
+        'conversion_rate_above',
+        'payment_rate_ticket',
+        'payment_rate_credit_card'
     ];
+
 }
