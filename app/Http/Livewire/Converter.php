@@ -2,6 +2,9 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Conversion;
+use App\Models\Fee;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 use Livewire\Component;
 
@@ -23,10 +26,15 @@ class Converter extends Component
     public $default_value = '';                         // valor utilizado para conversão após as taxas
     public $destination_value = '';                     // valor comprado em moeda destino
 
-
     public function render()
     {
-        return view('livewire.converter');
+        $user_id = Auth::id();
+        $my_conversions = Conversion::where('user_id', $user_id)->get();
+
+        return view('livewire.converter',[
+            'user_id' => $user_id,
+            'my_conversions' => $my_conversions
+        ]);
     }
 
 
@@ -45,18 +53,34 @@ class Converter extends Component
             ]
         );
 
+        $fee = Fee::first();
+
         $this->show_form = false;
         $response = Http::get("https://economia.awesomeapi.com.br/json/last/$this->destination_currency-$this->default_currency")->json();
 
         $this->ask_value = (float) $response["$this->destination_currency"."$this->default_currency"]["ask"];
-        $this->conversion_rate = $this->value < 3000 ? 0.02 : 0.01;
-        $this->payment_rate = $this->type_payment == 'Boleto' ? 0.0145 : 0.0763;
+        $this->conversion_rate = $this->value < 3000 ? $fee->conversion_rate_under : $fee->conversion_rate_above;
+        $this->payment_rate = $this->type_payment == 'Boleto' ? $fee->payment_rate_ticket : $fee->payment_rate_credit_card;
         $this->conversion_rate_value = $this->value * $this->conversion_rate;
         $this->payment_rate_value = $this->value * $this->payment_rate;
         $this->default_value = $this->value - $this->conversion_rate_value - $this->payment_rate_value;
         $this->destination_value = $this->default_value / $this->ask_value;
 
-
+        Conversion::create([
+            'default_currency' => $this->default_currency,
+            'default_currency_ext' => $this->default_currency_ext,
+            'destination_currency' => $this->destination_currency,
+            'value' => $this->value,
+            'type_payment' => $this->type_payment,
+            'ask_value' => $this->ask_value,
+            'conversion_rate' => $this->conversion_rate,
+            'conversion_rate_value' => $this->conversion_rate_value,
+            'payment_rate' => $this->payment_rate,
+            'payment_rate_value' => $this->payment_rate_value,
+            'default_value' => $this->default_value,
+            'destination_value' => $this->destination_value,
+            'user_id' => Auth::id()
+        ]);
 
     }
 }
