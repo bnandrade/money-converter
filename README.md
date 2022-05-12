@@ -8,7 +8,7 @@ taxas.
 
 Para a cotação em tempo real das moedas estrangeiras disponíveis, foi utilizada uma API de moedas chamada AwesomeAPI.
 
-###**As principais funcionalidades do sistema são as seguintes:**
+### **As principais funcionalidades do sistema são as seguintes:**
 
 - Para realizar uma conversão é necessário possuir cadastro e estar logado;
 - O sistema disponibiliza 4 moedas estrangeiras: Dólar Americano (USD), Dólar Australiano (AUD), Euro (EUR) e Libra Esterlina (GBP);
@@ -18,7 +18,7 @@ Para a cotação em tempo real das moedas estrangeiras disponíveis, foi utiliza
 - O sistema registra o histórico de todas as conversões realizadas pelo usuário;
 - A cada conversão realizada, o sistema envia um e-mail para o usuário cadastrado com os detalhes da transação.
 
-###Tecnologias utilizadas:
+### Tecnologias utilizadas:
 
 - [PHP +7.4]
 - [Framework Laravel 8.x](https://laravel.com/)
