@@ -8,6 +8,7 @@ use Livewire\Component;
 
 class MyConversions extends Component
 {
+
     public function render()
     {
         $user_id = Auth::id();
@@ -15,7 +16,7 @@ class MyConversions extends Component
 
         return view('livewire.my-conversions',[
             'user_id' => $user_id,
-            'my_conversions' => $my_conversions
+            'my_conversions' => $my_conversions,
         ]);
     }
 }

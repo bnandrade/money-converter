@@ -1,4 +1,4 @@
-@if($my_conversions->count() > 0)
+@if($my_conversions)
 
     <div class="p-4 border-t-2">
         <div class="text-xl font-semibold mb-2 text-center bg-gray-500 text-white rounded py-2">HIstórico de minhas conversões:</div>

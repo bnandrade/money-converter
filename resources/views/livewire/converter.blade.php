@@ -8,6 +8,7 @@
                     <div class="grid grid-cols-3 gap-4 p-6 bg-white border-gray-200">
 
                         @if($show_form)
+
                             <div class="col-span-3 text-lg">
                                 Moeda de origem: <span class=" font-bold">{{$default_currency_ext}} ({{$default_currency}})</span>
                             </div>
@@ -16,7 +17,8 @@
                                 <div class="mb-3 xl:w-96">
                                     <label for="destination_currency" class="form-label inline-block mb-2 text-gray-700">Selecione a
                                         moeda destino</label>
-                                    <select id="destination_currency" wire:model="destination_currency" class="form-select appearance-none
+                                    <select id="destination_currency" wire:model="destination_currency"
+                                            class="form-select appearance-none
                                                   block
                                                   w-full
                                                   px-3
@@ -79,7 +81,8 @@
                                     <div class="mb-3 xl:w-96">
                                         <label for="type_payment" class="form-label inline-block mb-2 text-gray-700">Selecione a
                                             forma de pagamento</label>
-                                        <select id="type_payment" wire:model="type_payment" class="form-select appearance-none
+                                        <select id="type_payment" wire:model="type_payment"
+                                                class="form-select appearance-none
                                                       block
                                                       w-full
                                                       px-3

@@ -31,7 +31,9 @@
 
             <div>
                 <p class="mt-4 text-sm">
-                    {{$usermessage}}<br>
+                    {{$usermessage}}
+                </p>
+                <p class="mt-4 text-sm">
                     {{$username}}
                 </p>
             </div>
