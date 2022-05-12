@@ -80,6 +80,7 @@ Verificar as configurações no arquivo .env
 ### Autor
 
 - [Bruno Andrade](https://github.com/bnandrade)
+- [Vídeo apresentação](https://www.loom.com/share/b1049c256e3b44ceaf8fbe3239fac8d6)
 
 ## License
 
