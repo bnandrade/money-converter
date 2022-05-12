@@ -27,6 +27,21 @@ Para a cotação em tempo real das moedas estrangeiras disponíveis, foi utiliza
 - [Livewire](https://laravel-livewire.com/docs/2.x/quickstart#install-livewire).
 - [Guzzle HTTP Client](https://laravel.com/docs/8.x/http-client#request-data).
 - [Mailtrap](https://mailtrap.io/) - para simulação de envio de e-mail localmente
+- [MySQL]
+
+## Development setup
+
+Basta clonar este repo e dar os comandos abaixo:
+
+```sh
+composer install
+npm install
+npm run dev
+```
+
+```sh
+Verificar as configurações no arquivo .env
+```
 
 ### Autor
 
