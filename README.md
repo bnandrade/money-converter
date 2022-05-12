@@ -37,6 +37,8 @@ Basta clonar este repo e dar os comandos abaixo:
 composer install
 npm install
 npm run dev
+php artisan migrate
+php artisan db:seed
 ```
 
 ```sh
