@@ -45,6 +45,38 @@ php artisan db:seed
 Verificar as configurações no arquivo .env
 ```
 
+### Prints do Sistema
+
+<img src="./public/prints/print-login.png">
+<em>Tela de Login</em>
+
+<hr>
+
+<img src="./public/prints/print-register.png">
+<em>Tela de Cadastro</em>
+
+<hr>
+
+<img src="./public/prints/print-dashboard.png">
+<em>Painel de conversão de moeda do usuário</em>
+
+<hr>
+
+<img src="./public/prints/print-conversao.png">
+<em>Detalhes de uma conversão de moeda</em>
+
+<hr>
+
+<img src="./public/prints/print-config-taxas.png">
+<em>Tela de configuração das Taxas de Pagamento e Conversão</em>
+
+<hr>
+
+<img src="./public/prints/print-caixa-email.png">
+<em>Caixa de e-mail (Mailtrap) com os detalhes da conversão de moeda do usuário</em>
+
+<hr>
+
 ### Autor
 
 - [Bruno Andrade](https://github.com/bnandrade)
