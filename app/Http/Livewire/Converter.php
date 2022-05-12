@@ -31,14 +31,7 @@ class Converter extends Component
 
     public function render()
     {
-
-        $user_id = Auth::id();
-        $my_conversions = Conversion::where('user_id', $user_id)->orderBy('id', 'DESC')->get();
-
-        return view('livewire.converter',[
-            'user_id' => $user_id,
-            'my_conversions' => $my_conversions
-        ]);
+        return view('livewire.converter');
     }
 
 
